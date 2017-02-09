@@ -1,0 +1,56 @@
+// Three image spash thing
+.three {
+	margin: 0 0 3em;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+	div {
+		// width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		flex: 0 0 100%;
+		align-content: flex-end;
+
+		margin: 0;
+		padding: 0;
+		background-size: cover; // Center those images
+		background-repeat: no-repeat;
+		background-position: center;
+
+		h2 {
+			padding: 15% 5% 2%;
+		}
+
+		p {
+			padding: 0 5% 30%;
+		}
+		p,
+		h2,
+		h3 {
+			margin: 0;
+			flex: 0 0 100%;
+			color: $white;
+		}
+	}
+
+	@media only screen and (min-width: $breakpoint-med) {
+
+
+		div {
+			width: auto;
+			background-size: auto 100%; // Center those images
+			flex: 1;
+
+			@include transition(background-size 0.2s ease-in);
+			
+		}
+
+		div:hover {
+			background-size: auto 120%;
+		}
+	}
+}
